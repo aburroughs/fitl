@@ -20,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('about', 'PageController@about');
+
+Route::get('recipes/{recipe}', 'RecipeController@show');
