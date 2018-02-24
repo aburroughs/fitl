@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Recipe;
+
 
 class RecipeController extends Controller
 {
@@ -48,9 +50,19 @@ class RecipeController extends Controller
      */
     public function show($id)
     {
+        // created an empty array named data 
+        $data =array();
         
+        // added the key and value 'id' to array
+        //$data ['id'] =$id;
 
-        return view('recipes/show');
+        // find question object with this id 
+        $recipe = Recipe::findOrFail($id);
+        $data['object'] = $recipe;
+
+
+
+        return view('recipes/show', $data);
     }
 
     /**

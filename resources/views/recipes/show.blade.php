@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Show Recipe Page</title>
+		<title><?php echo $object->name; ?></title>
 	</head>
+	
+
+
 	<body>
-		<h1>Show Recipe Page</h1>
-		<p>More to come...</p>
+		<h1><?php echo $object->name; ?></h1>
+		<p>Cook Time:&nbsp<?php  echo $object->cook_time; ?></p>
+		<p>Ingredients:&nbsp<br><?php  echo $object->ingredients ?></p>
+		<p>Cooking Instructions:&nbsp<br><?php  echo $object->instructions ?></p>
+
 
 	</body>
-
-
-
-
-
-
 </html>
